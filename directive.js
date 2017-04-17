@@ -7,18 +7,18 @@
     var that = this,
         dayRange = [1, 31],
         months = [
-          'January',
-          'February',
-          'March',
-          'April',
-          'May',
-          'June',
-          'July',
-          'August',
-          'September',
-          'October',
-          'November',
-          'December'
+          'Enero',
+          'Febrero',
+          'Marzo',
+          'Abril',
+          'Mayo',
+          'Junio',
+          'Julio',
+          'Agosto',
+          'Septiembre',
+          'Octubre',
+          'Noviembre',
+          'Diciembre'
         ];
 
     function changeDate (date) {
@@ -138,7 +138,7 @@
         }
 
         if (attrs.required) {
-          required = attrs.required.split(' ');
+          required = angular.isString(attrs.required) ? attrs.required.split(' ') : attrs.required;
 
           ctrl.$parsers.push(function (value) {
             angular.forEach(required, function (elem) {
